@@ -1,6 +1,7 @@
-```html
+```html id="j2d7sp"
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -13,6 +14,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <style>
 
+/* RESET */
+
 *{
     margin:0;
     padding:0;
@@ -24,10 +27,12 @@ html{
     scroll-behavior:smooth;
 }
 
+/* BODY */
+
 body{
 
     background:
-    linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.70)),
+    linear-gradient(rgba(10,15,30,0.45), rgba(10,15,30,0.45)),
     url('background.jpeg');
 
     background-size:cover;
@@ -39,24 +44,47 @@ body{
     line-height:1.6;
 }
 
-/* NAVBAR */
+/* ANIMATION */
+
+section{
+    animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* CONTAINER */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
 
 header{
 
-    background:rgba(15,23,42,0.65);
-    backdrop-filter:blur(10px);
+    background:rgba(15,23,42,0.55);
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
 
     position:sticky;
     top:0;
     z-index:1000;
 
     border-bottom:1px solid rgba(255,255,255,0.1);
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
 }
 
 nav{
@@ -67,9 +95,13 @@ nav{
 }
 
 .logo{
-    font-size:30px;
+    font-size:32px;
     font-weight:bold;
     color:#38bdf8;
+
+    text-shadow:
+    0 0 10px rgba(56,189,248,0.6),
+    0 0 20px rgba(56,189,248,0.3);
 }
 
 nav ul{
@@ -82,9 +114,11 @@ nav ul li{
 }
 
 nav ul li a{
-    text-decoration:none;
+
     color:white;
+    text-decoration:none;
     font-weight:500;
+
     transition:0.3s;
 }
 
@@ -101,13 +135,18 @@ nav ul li a:hover{
 }
 
 .hero-content{
-    max-width:700px;
+    max-width:750px;
 }
 
 .hero h1{
-    font-size:75px;
+
+    font-size:78px;
     line-height:1.1;
-    margin-bottom:20px;
+    margin-bottom:25px;
+
+    text-shadow:
+    0 0 10px rgba(56,189,248,0.7),
+    0 0 20px rgba(56,189,248,0.5);
 }
 
 .hero span{
@@ -116,25 +155,29 @@ nav ul li a:hover{
 
 .hero p{
     font-size:22px;
-    color:#d1d5db;
+    color:#e2e8f0;
     margin-bottom:35px;
 }
 
+/* BUTTONS */
+
 .hero-buttons{
     display:flex;
+    gap:20px;
     flex-wrap:wrap;
-    gap:15px;
 }
 
 .btn{
 
     display:inline-block;
+
     padding:14px 28px;
 
     background:#38bdf8;
     color:black;
 
-    border-radius:10px;
+    border-radius:12px;
+
     text-decoration:none;
     font-weight:bold;
 
@@ -142,7 +185,13 @@ nav ul li a:hover{
 }
 
 .btn:hover{
-    transform:translateY(-3px);
+
+    transform:
+    translateY(-5px)
+    scale(1.05);
+
+    box-shadow:
+    0 10px 25px rgba(56,189,248,0.4);
 }
 
 .btn-outline{
@@ -152,17 +201,24 @@ nav ul li a:hover{
     color:#38bdf8;
 }
 
-/* SECTION */
+/* SECTIONS */
 
 section{
     padding:100px 0;
 }
 
 .section-title{
+
     text-align:center;
+
     font-size:45px;
+
     margin-bottom:60px;
+
     color:#38bdf8;
+
+    text-shadow:
+    0 0 10px rgba(56,189,248,0.4);
 }
 
 /* ABOUT */
@@ -177,21 +233,25 @@ section{
 
 .about img{
     width:100%;
-    border-radius:20px;
+    border-radius:25px;
 }
 
 .about-text{
 
-    background:rgba(15,23,42,0.55);
+    background:rgba(15,23,42,0.50);
+
     backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
 
     padding:35px;
-    border-radius:20px;
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,0.1);
 }
 
 .about-text p{
     margin-bottom:20px;
-    color:#e5e7eb;
+    color:#e2e8f0;
 }
 
 /* SKILLS */
@@ -205,11 +265,13 @@ section{
 
 .skill-card{
 
-    background:rgba(15,23,42,0.55);
+    background:rgba(15,23,42,0.50);
+
     backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
 
     padding:30px;
-    border-radius:18px;
+    border-radius:20px;
 
     border:1px solid rgba(255,255,255,0.1);
 
@@ -217,8 +279,15 @@ section{
 }
 
 .skill-card:hover{
-    transform:translateY(-5px);
+
+    transform:
+    translateY(-10px)
+    scale(1.03);
+
     border-color:#38bdf8;
+
+    box-shadow:
+    0 15px 35px rgba(56,189,248,0.25);
 }
 
 .skill-card i{
@@ -242,11 +311,13 @@ section{
 
 .project-card{
 
-    background:rgba(15,23,42,0.55);
+    background:rgba(15,23,42,0.50);
+
     backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
 
     padding:30px;
-    border-radius:18px;
+    border-radius:20px;
 
     border:1px solid rgba(255,255,255,0.1);
 
@@ -254,8 +325,15 @@ section{
 }
 
 .project-card:hover{
-    transform:translateY(-5px);
+
+    transform:
+    translateY(-10px)
+    scale(1.03);
+
     border-color:#38bdf8;
+
+    box-shadow:
+    0 15px 35px rgba(56,189,248,0.25);
 }
 
 .project-card h3{
@@ -267,13 +345,17 @@ section{
 
 .contact{
 
-    background:rgba(15,23,42,0.55);
+    background:rgba(15,23,42,0.50);
+
     backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
 
     padding:40px;
-    border-radius:20px;
+    border-radius:25px;
 
     text-align:center;
+
+    border:1px solid rgba(255,255,255,0.1);
 }
 
 .contact p{
@@ -291,39 +373,58 @@ section{
 }
 
 .social-icons a{
+
     color:white;
-    font-size:30px;
+
+    font-size:32px;
+
     margin:0 15px;
+
     transition:0.3s;
 }
 
 .social-icons a:hover{
+
     color:#38bdf8;
+
+    transform:scale(1.2);
 }
 
 /* FOOTER */
 
 footer{
 
-    background:rgba(15,23,42,0.65);
-    backdrop-filter:blur(10px);
+    background:rgba(15,23,42,0.55);
+
+    backdrop-filter:blur(12px);
 
     text-align:center;
+
     padding:25px;
 
     margin-top:50px;
+
+    border-top:1px solid rgba(255,255,255,0.1);
 }
 
 /* MOBILE */
 
 @media(max-width:768px){
 
+    .hero{
+        text-align:center;
+    }
+
     .hero h1{
-        font-size:50px;
+        font-size:52px;
     }
 
     .hero p{
         font-size:18px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
     }
 
     .about{
@@ -360,14 +461,18 @@ footer{
 
 <nav>
 
-<div class="logo">Gowda M</div>
+<div class="logo">
+Gowda M
+</div>
 
 <ul>
+
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
+
 </ul>
 
 </nav>
@@ -389,8 +494,9 @@ Hi, I'm <span>Gowda M</span>
 </h1>
 
 <p>
-Linux System Administrator | DevOps Engineer |
-Infrastructure Automation Enthusiast
+🚀 Linux Administrator • DevOps Engineer • Automation Enthusiast
+
+Building scalable infrastructure, automating deployments, and creating reliable enterprise environments using Linux, Docker, Jenkins & Cloud technologies.
 </p>
 
 <div class="hero-buttons">
@@ -418,7 +524,7 @@ Download Resume
 <div class="container">
 
 <h2 class="section-title">
-About Me
+👨‍💻 About Me
 </h2>
 
 <div class="about">
@@ -458,7 +564,7 @@ Passionate about automation, cloud technologies, and building reliable infrastru
 <div class="container">
 
 <h2 class="section-title">
-Skills & Technologies
+⚡ Skills & Technologies
 </h2>
 
 <div class="skills-grid">
@@ -548,14 +654,16 @@ Ansible, Automation & Server Provisioning
 <div class="container">
 
 <h2 class="section-title">
-Projects
+🚀 Projects
 </h2>
 
 <div class="projects">
 
 <div class="project-card">
 
-<h3>Linux Troubleshooting Repository</h3>
+<h3>
+Linux Troubleshooting Repository
+</h3>
 
 <p>
 Real-time Linux troubleshooting repository focused on production-level issues and automation.
@@ -565,7 +673,9 @@ Real-time Linux troubleshooting repository focused on production-level issues an
 
 <div class="project-card">
 
-<h3>Jenkins CI/CD Pipeline</h3>
+<h3>
+Jenkins CI/CD Pipeline
+</h3>
 
 <p>
 Automated CI/CD deployment pipeline using Jenkins and GitHub integration.
@@ -575,7 +685,9 @@ Automated CI/CD deployment pipeline using Jenkins and GitHub integration.
 
 <div class="project-card">
 
-<h3>Docker Deployment</h3>
+<h3>
+Docker Deployment
+</h3>
 
 <p>
 Containerized application deployment using Docker and automation workflows.
@@ -585,7 +697,9 @@ Containerized application deployment using Docker and automation workflows.
 
 <div class="project-card">
 
-<h3>Static Portfolio Website</h3>
+<h3>
+Static Portfolio Website
+</h3>
 
 <p>
 Responsive modern portfolio website hosted using GitHub Pages.
@@ -606,7 +720,7 @@ Responsive modern portfolio website hosted using GitHub Pages.
 <div class="container">
 
 <h2 class="section-title">
-Contact Me
+📬 Contact Me
 </h2>
 
 <div class="contact">
