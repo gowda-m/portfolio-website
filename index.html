@@ -1,12 +1,15 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Gowda M | Linux Administrator & DevOps Engineer</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
 <style>
 
@@ -17,36 +20,43 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
+
     background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-    url('background.jpg');
+    linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.70)),
+    url('background.jpeg');
 
     background-size:cover;
     background-position:center;
-    background-attachment:fixed;
     background-repeat:no-repeat;
+    background-attachment:fixed;
 
     color:white;
     line-height:1.6;
 }
 
-html{
-    scroll-behavior:smooth;
+/* NAVBAR */
+
+header{
+
+    background:rgba(15,23,42,0.65);
+    backdrop-filter:blur(10px);
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
 .container{
     width:90%;
     max-width:1200px;
     margin:auto;
-}
-
-header{
-    background:#111827;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    border-bottom:1px solid #1e293b;
 }
 
 nav{
@@ -57,7 +67,7 @@ nav{
 }
 
 .logo{
-    font-size:28px;
+    font-size:30px;
     font-weight:bold;
     color:#38bdf8;
 }
@@ -74,6 +84,7 @@ nav ul li{
 nav ul li a{
     text-decoration:none;
     color:white;
+    font-weight:500;
     transition:0.3s;
 }
 
@@ -81,16 +92,21 @@ nav ul li a:hover{
     color:#38bdf8;
 }
 
+/* HERO */
+
 .hero{
     height:100vh;
     display:flex;
     align-items:center;
-    justify-content:center;
-    text-align:left;
+}
+
+.hero-content{
+    max-width:700px;
 }
 
 .hero h1{
-    font-size:60px;
+    font-size:75px;
+    line-height:1.1;
     margin-bottom:20px;
 }
 
@@ -99,64 +115,105 @@ nav ul li a:hover{
 }
 
 .hero p{
-    max-width:700px;
-    margin:auto;
-    margin-bottom:30px;
-    color:#cbd5e1;
-    font-size:18px;
+    font-size:22px;
+    color:#d1d5db;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
 }
 
 .btn{
+
     display:inline-block;
-    padding:12px 25px;
+    padding:14px 28px;
+
     background:#38bdf8;
     color:black;
+
+    border-radius:10px;
     text-decoration:none;
-    border-radius:8px;
     font-weight:bold;
-    margin:10px;
+
     transition:0.3s;
 }
 
 .btn:hover{
-    transform:scale(1.05);
+    transform:translateY(-3px);
 }
 
+.btn-outline{
+
+    background:transparent;
+    border:2px solid #38bdf8;
+    color:#38bdf8;
+}
+
+/* SECTION */
+
 section{
-    padding:80px 0;
+    padding:100px 0;
 }
 
 .section-title{
     text-align:center;
-    font-size:40px;
-    margin-bottom:50px;
+    font-size:45px;
+    margin-bottom:60px;
     color:#38bdf8;
 }
 
+/* ABOUT */
+
 .about{
+
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:40px;
+    gap:50px;
     align-items:center;
 }
 
 .about img{
     width:100%;
-    border-radius:15px;
+    border-radius:20px;
 }
 
+.about-text{
+
+    background:rgba(15,23,42,0.55);
+    backdrop-filter:blur(12px);
+
+    padding:35px;
+    border-radius:20px;
+}
+
+.about-text p{
+    margin-bottom:20px;
+    color:#e5e7eb;
+}
+
+/* SKILLS */
+
 .skills-grid{
+
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    gap:25px;
 }
 
 .skill-card{
-    background:#111827;
-    padding:25px;
-    border-radius:12px;
+
+    background:rgba(15,23,42,0.55);
+    backdrop-filter:blur(12px);
+
+    padding:30px;
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,0.1);
+
     transition:0.3s;
-    border:1px solid #1e293b;
 }
 
 .skill-card:hover{
@@ -165,22 +222,34 @@ section{
 }
 
 .skill-card i{
-    font-size:40px;
+    font-size:45px;
     color:#38bdf8;
     margin-bottom:15px;
 }
 
+.skill-card h3{
+    margin-bottom:10px;
+}
+
+/* PROJECTS */
+
 .projects{
+
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:25px;
 }
 
 .project-card{
-    background:#111827;
-    padding:25px;
-    border-radius:12px;
-    border:1px solid #1e293b;
+
+    background:rgba(15,23,42,0.55);
+    backdrop-filter:blur(12px);
+
+    padding:30px;
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,0.1);
+
     transition:0.3s;
 }
 
@@ -190,12 +259,26 @@ section{
 }
 
 .project-card h3{
-    margin-bottom:15px;
     color:#38bdf8;
+    margin-bottom:15px;
 }
 
+/* CONTACT */
+
 .contact{
+
+    background:rgba(15,23,42,0.55);
+    backdrop-filter:blur(12px);
+
+    padding:40px;
+    border-radius:20px;
+
     text-align:center;
+}
+
+.contact p{
+    margin-bottom:15px;
+    font-size:18px;
 }
 
 .contact a{
@@ -204,12 +287,12 @@ section{
 }
 
 .social-icons{
-    margin-top:20px;
+    margin-top:25px;
 }
 
 .social-icons a{
     color:white;
-    font-size:28px;
+    font-size:30px;
     margin:0 15px;
     transition:0.3s;
 }
@@ -218,19 +301,29 @@ section{
     color:#38bdf8;
 }
 
-.skill-card,
-.project-card,
-header,
+/* FOOTER */
+
 footer{
-    background:rgba(17,24,39,0.65);
+
+    background:rgba(15,23,42,0.65);
     backdrop-filter:blur(10px);
-    -webkit-backdrop-filter:blur(10px);
+
+    text-align:center;
+    padding:25px;
+
+    margin-top:50px;
 }
+
+/* MOBILE */
 
 @media(max-width:768px){
 
     .hero h1{
-        font-size:40px;
+        font-size:50px;
+    }
+
+    .hero p{
+        font-size:18px;
     }
 
     .about{
@@ -243,6 +336,12 @@ footer{
 
     nav ul{
         margin-top:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    nav ul li{
+        margin:10px;
     }
 
 }
@@ -253,7 +352,10 @@ footer{
 
 <body>
 
+<!-- HEADER -->
+
 <header>
+
 <div class="container">
 
 <nav>
@@ -271,52 +373,71 @@ footer{
 </nav>
 
 </div>
+
 </header>
+
+<!-- HERO -->
 
 <section class="hero" id="home">
 
 <div class="container">
 
-<h1>Hi, I'm <span>Gowda M</span></h1>
+<div class="hero-content">
+
+<h1>
+Hi, I'm <span>Gowda M</span>
+</h1>
 
 <p>
-Linux System Administrator | DevOps Engineer | Infrastructure Automation Enthusiast
-Building secure, scalable, and automated enterprise infrastructure using Linux, Docker, Jenkins, VMware, and DevOps technologies.
+Linux System Administrator | DevOps Engineer |
+Infrastructure Automation Enthusiast
 </p>
 
-<a href="#projects" class="btn">View Projects</a>
+<div class="hero-buttons">
 
-<a href="resume.pdf" class="btn" download>Download Resume</a>
+<a href="#projects" class="btn">
+View Projects
+</a>
+
+<a href="resume.pdf" class="btn btn-outline" download>
+Download Resume
+</a>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
+<!-- ABOUT -->
+
 <section id="about">
 
 <div class="container">
 
-<h2 class="section-title">About Me</h2>
+<h2 class="section-title">
+About Me
+</h2>
 
 <div class="about">
 
 <div>
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop" alt="About">
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop">
+
 </div>
 
-<div>
+<div class="about-text">
 
 <p>
-Hi, I’m Gowda M an IT professional specializing in Linux Administration, DevOps Engineering, Infrastructure Automation, and Virtualization.
+Hi, I’m Gowda M — an IT professional specializing in Linux Administration, DevOps Engineering, Infrastructure Automation, and Virtualization.
 </p>
-
-<br>
 
 <p>
 I have hands-on experience managing enterprise Linux servers, automating deployments, containerized applications, backup solutions, and virtualization platforms.
 </p>
-
-<br>
 
 <p>
 Passionate about automation, cloud technologies, and building reliable infrastructure environments.
@@ -330,48 +451,88 @@ Passionate about automation, cloud technologies, and building reliable infrastru
 
 </section>
 
+<!-- SKILLS -->
+
 <section id="skills">
 
 <div class="container">
 
-<h2 class="section-title">Skills & Technologies</h2>
+<h2 class="section-title">
+Skills & Technologies
+</h2>
 
 <div class="skills-grid">
 
 <div class="skill-card">
+
 <i class="fab fa-linux"></i>
+
 <h3>Linux Administration</h3>
-<p>SLES, Ubuntu, RHEL, Server Management, Troubleshooting</p>
+
+<p>
+SLES, Ubuntu, RHEL, Server Management & Troubleshooting
+</p>
+
 </div>
 
 <div class="skill-card">
+
 <i class="fab fa-docker"></i>
+
 <h3>Docker</h3>
-<p>Containerization & Application Deployment</p>
+
+<p>
+Containerization & Deployment Automation
+</p>
+
 </div>
 
 <div class="skill-card">
+
 <i class="fas fa-code-branch"></i>
+
 <h3>Jenkins CI/CD</h3>
-<p>Automated Build & Deployment Pipelines</p>
+
+<p>
+Automated Build & Deployment Pipelines
+</p>
+
 </div>
 
 <div class="skill-card">
+
 <i class="fas fa-server"></i>
+
 <h3>Virtualization</h3>
-<p>VMware ESXi & Proxmox Administration</p>
+
+<p>
+VMware ESXi & Proxmox Administration
+</p>
+
 </div>
 
 <div class="skill-card">
+
 <i class="fas fa-terminal"></i>
+
 <h3>Shell Scripting</h3>
-<p>Bash Automation & Linux Scripting</p>
+
+<p>
+Bash Automation & Linux Scripting
+</p>
+
 </div>
 
 <div class="skill-card">
+
 <i class="fas fa-network-wired"></i>
+
 <h3>Infrastructure Automation</h3>
-<p>Ansible, Automation & Server Provisioning</p>
+
+<p>
+Ansible, Automation & Server Provisioning
+</p>
+
 </div>
 
 </div>
@@ -379,41 +540,57 @@ Passionate about automation, cloud technologies, and building reliable infrastru
 </div>
 
 </section>
+
+<!-- PROJECTS -->
 
 <section id="projects">
 
 <div class="container">
 
-<h2 class="section-title">Projects</h2>
+<h2 class="section-title">
+Projects
+</h2>
 
 <div class="projects">
 
 <div class="project-card">
+
 <h3>Linux Troubleshooting Repository</h3>
+
 <p>
-Real time Linux administration troubleshooting repository focused on production level issues, automation, and practical system administration.
+Real-time Linux troubleshooting repository focused on production-level issues and automation.
 </p>
+
 </div>
 
 <div class="project-card">
+
 <h3>Jenkins CI/CD Pipeline</h3>
+
 <p>
-Automated CI/CD deployment pipeline using Jenkins, GitHub integration, and automation tools.
+Automated CI/CD deployment pipeline using Jenkins and GitHub integration.
 </p>
+
 </div>
 
 <div class="project-card">
+
 <h3>Docker Deployment</h3>
+
 <p>
-Containerized application deployment using Docker with infrastructure automation and deployment workflows.
+Containerized application deployment using Docker and automation workflows.
 </p>
+
 </div>
 
 <div class="project-card">
+
 <h3>Static Portfolio Website</h3>
+
 <p>
-Responsive modern portfolio website using HTML, CSS, JavaScript, and GitHub Pages hosting.
+Responsive modern portfolio website hosted using GitHub Pages.
 </p>
+
 </div>
 
 </div>
@@ -422,17 +599,28 @@ Responsive modern portfolio website using HTML, CSS, JavaScript, and GitHub Page
 
 </section>
 
+<!-- CONTACT -->
+
 <section id="contact">
 
 <div class="container">
 
-<h2 class="section-title">Contact Me</h2>
+<h2 class="section-title">
+Contact Me
+</h2>
 
 <div class="contact">
 
-<p>Email: <a href="mailto:gowdaviji58@gmail.com">gowdaviji58@gmail.com</a></p>
+<p>
+📧 Email:
+<a href="mailto:gowdaviji58@gmail.com">
+gowdaviji58@gmail.com
+</a>
+</p>
 
-<p>Location: Bangalore, India</p>
+<p>
+📍 Bangalore, India
+</p>
 
 <div class="social-icons">
 
@@ -452,9 +640,14 @@ Responsive modern portfolio website using HTML, CSS, JavaScript, and GitHub Page
 
 </section>
 
+<!-- FOOTER -->
+
 <footer>
 
-<p>© 2026 Gowda M | Always Learning • Always Automating • Always Improving</p>
+<p>
+© 2026 Gowda M |
+Always Learning • Always Automating • Always Improving
+</p>
 
 </footer>
 
